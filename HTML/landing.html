@@ -4,10 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing_Page</title>
-    <link rel="stylesheet" href="style.css">
-    <title>Popular flights</title>
 </head>
+<style>
+    body {
+        background-image: url("wes-hicks-wpMULg5iZOU-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .div_form {
+        height: 290px;
+        width: 600px;
+        background-color: rgb(187, 215, 222);
+        margin: 50px;
+    }
+    #reset {
+        text-align: center;
+    }
+    #submit {
+        text-align: center;
+    }
+    header {
+        text-align: center;
+    }
+    h2 {
+        margin: 50px;
+    }
+    label {
+        margin: 20px;
+    }
+</style>
+</head>
+
 <body>
+
+    <header>
+        <h1>Rainy Day in Raleigh
+        </h1>
+    </header>
+
+    <section id="section1">
+        <h2>Let's see if it is going to rain!</h2>
+    </section>
+    <div class="div_form">
+        <br>
+        <form action>
+            <label for="tmax">Temperature High (&degF)</label>
+            <input type="number" id = "tmax" name ="tmax" placeholder="90" required> 
+            <br> <br>
+            <label for="tmin">Temperature Low (&degF)</label>
+            <input type="number" id = "tmin" name ="tmin"placeholder="75" required> <br> <br>
+            <label for="humidity">% Humidity</label>
+            <input type="number" id = "humidity" name ="humidity" placeholder="50" required> <br><br>
+            <label for="wind">Windspeed (mph)</label>
+            <input type="number" id = "wind" name="wind" placeholder="2" required> <br> <br>
+            <label for="pressure">Pressure (inHg)</label>
+            <input type="float" id = "pressure" name="pressure" min = "25" max="32" placeholder="29.22" required > <br> <br>
+            <!-- pressure range is 25 32 -->
+            <div id ="submit">
+            <button id ="submit">Submit</button>
+            </div>
+            <br>
+            <div id ="reset">
+                <input type="reset">
+            </div>
     
+        </form>
+    </div>
+    <section id = "results">
+        <img src="https://via.placeholder.com/600x400" alt="Placeholder Image">
+    </section>
+    
+    <section id="#no_rain">
+        <h2>Parks</h2>
+        <p>parks db?
+
+        </p>
+        <button>Click Me</button>
+    </section>
+
+    <section id="#rainy">
+        <h2>Restaurants</h2>
+        <p>restaurants db?</p>
+    </section>
+
+<script src ="landing.js"></script>
 </body>
+
 </html>
