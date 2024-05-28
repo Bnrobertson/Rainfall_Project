@@ -31,13 +31,15 @@ def welcome():
 @app.route("/api/v1.0/<tmin>/<tmax>/<humidity>/<wind>/<pressure>")
 def predict(tmin, tmax, humidity, wind, pressure):
 
-    if request.method == ["POST"]:
-        result = model.predict(tmin, tmax, humidity, wind, pressure)
-        if int(result[0])==1:
-            prediction = "It is going to rain today"
-        else:
-            prediction = "It is not going to rain today"
-        return prediction
+    #if request.method == ["POST"]:
+    
+    result = model.predict(np.array([[float(tmin), float(tmax), float(humidity), float(wind), float(pressure)]]))
+    # if int(result[0])==1:
+    #     prediction = "It is going to rain today"
+    # else:
+    #     prediction = "It is not going to rain today"
+    # return prediction
+    return int(result[0])
 
 if __name__ == '__main__':
     app.run(debug = True)
