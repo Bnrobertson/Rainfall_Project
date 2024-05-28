@@ -31,7 +31,7 @@ def welcome():
 @app.route("/api/v1.0/<tmin>/<tmax>/<humidity>/<wind>/<pressure>")
 def predict(tmin, tmax, humidity, wind, pressure):
 
-    if request.method == "POST":
+    if request.method == ["POST"]:
         result = model.predict(tmin, tmax, humidity, wind, pressure)
         if int(result[0])==1:
             prediction = "It is going to rain today"
