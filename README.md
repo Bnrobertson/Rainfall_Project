@@ -8,6 +8,7 @@ This project aims to analyze historical rainfall data to understand the interpla
 - [Data Source](#Data-Source)
 - [Usage](#Usage)
 - [Results](#Results)
+- [Rainfall Analysis](#Rainfall-Analysis)
   
 ### Tools and Technologies
 
