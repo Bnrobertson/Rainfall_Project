@@ -3,6 +3,12 @@
 ## Overview
 This project aims to analyze historical rainfall data to understand the interplay between humidity, temperature, pressure, and precipitation in predicting rainfall. Our goal is to develop a predictive model that can improve weather forecasting accuracy.
 
+## Table of Contents
+- [Tools and Technologies](#Tools-and-Technologies)
+- [Data Source](#Data-Source)
+- [Usage](#Usage)
+- [Results](#Results)
+  
 ### Tools and Technologies
 
 - HTML
