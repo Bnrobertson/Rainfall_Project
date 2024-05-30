@@ -33,6 +33,18 @@
     label {
         margin: 20px;
     }
+    .container{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        width: 100%;
+        height: 100vh;
+        background: #3c5077;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 </head>
 
@@ -48,7 +60,7 @@
     </section>
     <div class="div_form">
         <br>
-        <form action>
+        <form method="POST">
             <label for="tmax">Temperature High (&degF)</label>
             <input type="number" id = "tmax" name ="tmax" placeholder="90" required> 
             <br> <br>
@@ -70,6 +82,9 @@
             </div>
     
         </form>
+    </div>
+    <div class = "container">
+        
     </div>
     <section id = "results">
         <img src="https://via.placeholder.com/600x400" alt="Placeholder Image">
