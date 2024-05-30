@@ -10,8 +10,6 @@ from flask_cors import CORS, cross_origin
 #################################################
 # Flask Setup
 #################################################
-### Change model name to load
-### Seriously, do this!
 app = Flask(__name__)
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 model = load_model('../Neural_Network_Model/rainfall_model.h5', compile = False)
@@ -33,13 +31,13 @@ def predict(tmin, tmax, humidity, wind, pressure):
 
     #if request.method == ["POST"]:
     
-    result = model.predict(np.array([[float(tmin), float(tmax), float(humidity), float(wind), float(pressure)]]))
-    # if int(result[0])==1:
-    #     prediction = "It is going to rain today"
-    # else:
-    #     prediction = "It is not going to rain today"
-    # return prediction
-    return jsonify(result.tolist())
+    result = model.predict(np.array([[float(tmin), float(tmax), float(wind), float(pressure), float(humidity)]]))
+    if int(result[0])==1:
+        prediction = "It is going to rain today"
+    else:
+        prediction = "It is not going to rain today"
+    return prediction
+    #return jsonify(result.tolist())
 
 if __name__ == '__main__':
     app.run(debug = True)
