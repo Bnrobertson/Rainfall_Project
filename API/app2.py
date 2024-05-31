@@ -41,7 +41,7 @@ def predict(tmin, tmax, humidity, wind, pressure):
         prediction = "It is going to rain today"
     else:
         prediction = "It is not going to rain today"
-    return prediction
+    return jsonify(prediction)
     
 if __name__ == '__main__':
     app.run(debug = True)
