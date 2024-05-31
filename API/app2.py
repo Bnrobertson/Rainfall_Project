@@ -10,8 +10,6 @@ from flask_cors import CORS, cross_origin
 #################################################
 # Flask Setup
 #################################################
-### Change model name to load
-### Seriously, do this!
 app = Flask(__name__)
 
 # Load the trained model
@@ -27,20 +25,23 @@ def welcome():
     """List all available api routes."""
     return (
         f"Available Routes:<br/>"
+        f"For the route below, you will be putting in the minimum temperature, maximum temperature, humidity, wind speed, and air pressure.<br/>"
         f"/api/v1.0/<tmin>/<tmax>/<humidity>/<wind>/<pressure><br/>"
         )
 
 @app.route("/api/v1.0/<tmin>/<tmax>/<humidity>/<wind>/<pressure>")
 def predict(tmin, tmax, humidity, wind, pressure):
 
-    #if request.method == "POST":
-    result = model.predict(np.array([[float(tmin), float(tmax), float(wind), float(pressure), float(humidity)]]))
+    #Put user-inputs retrieved from Javascript into model
+    result = model.predict(np.array([[float(tmin), float(tmax), float(wind), 
+                                    float(pressure), float(humidity)]]))
+    
+    #Use model's prediction to display if it will rain
     if int(result[0])==1:
         prediction = "It is going to rain today"
     else:
         prediction = "It is not going to rain today"
     return prediction
-    #return jsonify(result.tolist())
     
 if __name__ == '__main__':
     app.run(debug = True)
