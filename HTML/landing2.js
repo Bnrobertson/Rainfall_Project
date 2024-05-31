@@ -26,5 +26,4 @@ button.on("click", function () {
         console.log(data1);
         alert(data1)
     });
-    console.log(data1);
 })
