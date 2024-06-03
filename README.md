@@ -46,6 +46,7 @@ To recreate the analysis:
 Clone this repository to your local machine. In PostgreSQL, create a database entitled "Rainfall" Within the "Rainfall_project" database, use the Rain_no_rain.sql file to create a table named Rainfall Import the file to the "" table just created in PostgreSQL
 1.	### Data Fetching and Processing
 a.	Fetch daily weather data for Raleigh, NC using the Meteostat library.
+
 b.	Clean and convert the data, including temperature conversion to Fahrenheit, rainfall to inches, pressure to inHg, and wind speed to mph.
 
 2.	### Database Schema
@@ -53,15 +54,19 @@ a.	Create tables for rainfall and humidity data using the provided SQL schema.
 
 3.	### Model Training and Prediction
 a.	Split the cleaned data into training and testing datasets.
-b.	Train a ****** to predict rainfall.
+
+b.	Train a logistic regression to predict rainfall.
+
 c.	Evaluate the model and generate predictions.
 
 4.	### Flask Web Application
 a.	Set up a Flask app to serve predictions.
+
 b.	Load the trained model and create an API endpoint for predictions based on user inputs.
 
 5.	### User Interface
 a.	Create an HTML form for user input.
+
 b.	Use JavaScript (D3.js) to send user inputs to the Flask API and display the prediction.
 
 
