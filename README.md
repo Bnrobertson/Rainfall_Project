@@ -1,7 +1,7 @@
 # Rainfall_Project
 
 ## Overview
-This project aims to analyze and predict weather conditions using historical weather data for Raleigh, NC. The data is fetched using the Meteostat API, processed to clean and convert the relevant metrics, and then used to train a machine learning model to predict rainfall. Additionally, a Flask web application is provided to make predictions based on user inputs. We analyzed historical rainfall data to understand the interplay between humidity, temperature, pressure, and precipitation in predicting rainfall. Our goal is to develop a predictive model that can improve weather forecasting accuracy.
+This project aims to analyze and predict weather conditions using historical weather data for Raleigh, NC. The data is fetched using Meteostat library, processed to clean and convert the relevant metrics, and then used to train a machine learning model to predict rainfall. Additionally, a Flask web application is provided to make predictions based on user inputs. We analyzed historical rainfall data to understand the interplay between humidity, temperature, pressure, and precipitation in predicting rainfall. Our goal is to develop a predictive model that can improve weather forecasting accuracy.
 
 ## Table of Contents
 - [Data Collection](#Data-Collection)
@@ -36,14 +36,14 @@ We will utilize historical weather data from the following reputable sources:
 Weather Underground: Monthly weather history data from Weather Underground 
 (https://www.wunderground.com/history/monthly/us/nc/morrisville/KRDU/date/2024-5).
 
-Meteostat: Historical weather data formatted according to Meteostat standards (https://dev.meteostat.net/python/#installation).
+Meteostat Library: Historical weather data formatted according to Meteostat standards (https://dev.meteostat.net/python/#installation).
 
-The data will span 23 years to ensure a comprehensive analysis. We will validate the data by cross-referencing with other local weather stations and official meteorological records to ensure accuracy and completeness.
+The data will span nearly 25 years to ensure a comprehensive analysis. We will validate the data by cross-referencing with other local weather stations and official meteorological records to ensure accuracy and completeness. Meteostat data is sourceed from national weather services like the National Oceanic and Atmospheric Administration (NOAA)
 
 ## Usage
 
 To recreate the analysis:
-Clone this repository to your local machine. In PostgreSQL, create a database entitled "Rainfall" Within the "Rainfall_project" database, use the Rain_no_rain.sql file to create a table named Rainfall Import the file to the "" table just created in PostgreSQL
+Clone this repository to your local machine. In PostgreSQL, create a database entitled "Rainfall" Within the "Rainfall_project" database, use the Rain_no_rain.sql file to create a table named Rainfall Import the file to the table just created in PostgreSQL
 1.	### Data Fetching and Processing
 a.	Fetch daily weather data for Raleigh, NC using the Meteostat library.
 
